@@ -1,3 +1,4 @@
+
 const apiKey = '587f428ee99bf5975d2c281b0f41b4b5'; 
 const cityInput = document.getElementById('city-input');
 const fetchButton = document.getElementById('fetch-button');
