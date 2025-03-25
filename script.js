@@ -34,7 +34,7 @@ function displayWeatherData(data) {
 
 
 async function fetchWeatherData(city) {
-    const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}&units=m`;
+    const url = `https://api.weatherstack.com/current?access_key=${apiKey}&query=${city}&units=m`;
 
     try {
         const response = await fetch(url);
