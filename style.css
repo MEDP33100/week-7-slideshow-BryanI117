@@ -1,0 +1,109 @@
+body {
+    font-family: 'Open Sans', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #70e1f5, #ffd194); 
+    color: #132347; 
+    overflow: hidden; 
+}
+
+.slideshow-container {
+    width: 450px; 
+    border-radius: 15px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+}
+.slideshow-container:hover {
+    transform: scale(1.02);
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 0.8s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+#weather-icon {
+    width: 120px; 
+    height: 120px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; 
+}
+#weather-icon:hover{
+    transform: scale(1.1);
+}
+
+.slide h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    color: #2980b9; 
+}
+
+.slide p {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+}
+
+.controls {
+    margin-top: 25px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+#city-input {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 2px solid #ddd; 
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease; 
+}
+
+#city-input:focus {
+    border-color: #2980b9; 
+    outline: none; 
+}
+
+
+#fetch-button {
+    padding: 10px 20px;
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; 
+}
+
+#fetch-button:hover {
+    background-color: #2980b9;
+}
+
+#error-message {
+    margin-top: 1em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
